@@ -11,7 +11,7 @@ class PurchaseMenu {
     println()
     println("Press Enter Book ID number and press enter")
     val bookID: Int = scala.io.StdIn.readInt()
-    val book: Book = bookList.get(bookID)
+    val book: Book = bookList.get(bookID-1)
     var jsonObject: JSONObject = new JSONObject()
     val jsonString: String = "{\"BookID\": " + book.bookID + ",\"Book Name\": \"" + book.name + "\"}"
     val parser: JSONParser = new JSONParser();
